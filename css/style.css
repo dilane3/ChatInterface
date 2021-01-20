@@ -4,83 +4,24 @@ body {
 }
 
 .container-fluid {
-  background-color: #eee;
+  background-color: white;
   overflow: hidden;
-  min-width: 250px;
+  min-width: 200px;
 }
 
 .menu {
   display: none;
 }
-
-.contacts {
+ 
+.menu-barre {
   display: flex;
-  position: relative;
-  flex-direction: column;
-  background-color: rgba(76, 87, 248, 0.925);
-}
-
-.contact {
-  display: flex;
+  flex-direction: row;
   height: 80px;
-  position: relative;
-}
-
-.contact--image {
-  display: flex;
-  flex: 1;
-  margin-top: -12px;
-  margin-left: -5px;
-}
-
-.contact--image img {
-  height: 60px;
-  width: 60px;
-  margin-top: 5px;
-  border: 1px solid;
-  border-radius: 100%;  
-}
-
-.contact--info {
-  display: flex;
-  flex-direction: column;
-  flex: 7;
-  height: 80px;
-  margin-left: 10px;
-  margin-top: -16px;
-  padding-bottom: 5px;
-  padding-top: 5px;
-  padding-left: 5px;
-  padding-right: 10px;
-}
-
-.contact--name {
-  display: flex;
-  flex: 2;
-  font-size: 16px;
-  font-weight: bold;
-}
-
-.contact--message {
-  display: flex;
-  flex: 3;
-  font-size: 10px;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  align-self: top;
-}
-
-.date-message {
-  position: absolute;
-  top: 8px;
-  right: 30px;
-  font-size: 10px;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
-
-.options-contact {
-  top: 5px;
-  right: 5px;
-  font-size: 1.2rem;
+  width: 100%;
+  padding: 0 10px;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
 }
 
 .icone {
@@ -92,12 +33,56 @@ body {
   overflow-y: scroll;
 }
 
-.conversation-messages {
+.conversation, .contacts {
+  display: flex;
   position: relative;
+  flex-direction: column;
 }
 
 .contacts-list {
+  background-color:#eee;
+  justify-content: center;
+}
+
+.contact {
+  position: relative;
+  display: flex;
+  line-height: 25px;
+  flex-direction: row;
+  height: 80px;
+  width: 95%;
+  margin: 15px auto;
   background-color: white;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px lightgray;
+}
+
+.contact--info {
+  margin-left: 10px;
+}
+
+.contact--message {
+  font-size: .8rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.contact--date {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+}
+
+.contact--name {
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.contact--image {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  border: .5px solid lightgray;
 }
 
 .contacts-barre, .conversation-barre {
@@ -110,7 +95,11 @@ body {
 }
 
 .conversation-barre {
-  background-color: chartreuse;
+  background-color: white;
+}
+
+.contacts-barre {
+  background-color: #eee;
 }
 
 .conversation {
@@ -118,16 +107,29 @@ body {
   position: relative;
 }
 
+.messages {
+  display: block;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 70px;
+}
+
 .message-editor {
   position: absolute;
   bottom: 0;
   height: 70px;
-  background-color: blueviolet;
+  background-color:white;
 }
 
 @media screen and (min-width: 768px) {
   .menu {
     display: block;
+  }
+
+  .menu-barre {
+    display: none;
+    height: 50px;
   }
 }
 
