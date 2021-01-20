@@ -11,7 +11,7 @@ columnInterface.forEach(column => {
   column.style.height = `${window.innerHeight}px`;
 });
 
-messagesInterface.style.height = `${window.innerHeight -80}px`;
+messagesInterface.style.height = `${window.innerHeight -150}px`;
 contactsList.style.height = `${window.innerHeight - 80}px`;
 
 window.onresize = function() {
@@ -23,5 +23,5 @@ window.onresize = function() {
   });
 
   contactsList.style.height = `${window.innerHeight - 80}px`;
-  messagesInterface.style.height = `${window.innerHeight - 80}px`;
+  messagesInterface.style.height = `${window.innerHeight - 150}px`;
 }

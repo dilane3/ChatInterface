@@ -1,6 +1,7 @@
 body {
   font-size: 14px;
   font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
 }
 
 .container-fluid {
@@ -78,7 +79,7 @@ body {
   font-weight: bold;
 }
 
-.contact--image {
+.contact--image, .message-send--image img, .message-receive--image img {
   width: 50px;
   height: 50px;
   border-radius: 100%;
@@ -113,6 +114,54 @@ body {
   justify-content: center;
   align-items: center;
   padding-bottom: 70px;
+  background-color: rgba(89, 120, 124, 0.493);
+}
+
+.message {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 10px 0;
+}
+
+.message-send--image, .message-receive--image {
+  display: flex;
+  position: absolute;
+  bottom: 10px;
+}
+
+.message-send--image {
+  right: 10px;
+}
+
+.message-receive--image {
+  left: 10px;
+}
+
+.message-receive {
+  display: block;
+  width: auto;
+  max-width: 60%;
+  margin-left: 70px;
+  background-color: #eee;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+
+.message-send {
+  display: block;
+  max-width: 60%;
+  margin-left: auto;
+  margin-right: 70px;
+  background-color: blue;
+  color: white;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
 }
 
 .message-editor {
@@ -120,6 +169,10 @@ body {
   bottom: 0;
   height: 70px;
   background-color:white;
+}
+
+.input-message {
+  border: 0px;
 }
 
 @media screen and (min-width: 768px) {
