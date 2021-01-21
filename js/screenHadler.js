@@ -20,9 +20,6 @@ if (screenWidth < 768) {
   contactsList.style.height = `${window.innerHeight - 80}px`;
 }
 
-if (screenWidth <= 575) {
-  conversation.classList.add("d-block");
-}
 
 window.onresize = function () {
   screenWidth = window.innerWidth;

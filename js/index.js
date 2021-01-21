@@ -11,6 +11,7 @@ contacts.forEach(contact => {
     if (window.innerWidth <= 575) {
       contactInterface.classList.add("d-none");
       conversationInterface.classList.remove("d-none");
+      conversationInterface.classList.add("d-block");
     }
   });
 })
@@ -18,4 +19,5 @@ contacts.forEach(contact => {
 backConversation.addEventListener('click', function() {
   contactInterface.classList.remove("d-none");
   conversationInterface.classList.add("d-none");
+  conversationInterface.classList.remove("d-block");
 });

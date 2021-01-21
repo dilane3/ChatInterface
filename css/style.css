@@ -23,13 +23,22 @@ body {
   width: 100%;
   padding: 0 10px;
   background-color: white;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 
 .icone {
   font-size: 2rem;
   cursor: pointer;
+}
+
+.icone-commande {
+  font-size: 1.5rem;
+  color: gray;
+}
+
+.icone-active {
+  color: blue;
 }
 
 .scroll-view {
@@ -179,7 +188,7 @@ body {
 .message {
   position: relative;
   display: block;
-  width: auto;
+  width: 100%;
   padding: 10px 0;
 }
 
@@ -237,17 +246,40 @@ body {
   border-top: 1px solid #eee;
 }
 
+.icone-send {
+  display: absolute;
+  bottom: 20px;
+  right: 30px;
+}
+
+.input-group {
+  position: relative;
+}
+
 .input-message {
   border: 0px;
 }
 
-.input-message:focus {
-  outline: 0;
-}
-
 @media screen and (min-width: 768px) {
   .menu {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-right: 1px solid rgb(218, 216, 216);
+  }
+
+  .commandes {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .commandes i {
+    margin-top: 30px;
+  }
+
+  .setting-icone {
+    margin-bottom: 20px;
   }
 
   .menu-barre {
