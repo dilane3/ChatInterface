@@ -1,27 +1,21 @@
-let screen = document.querySelector(".container-fluid");
-let columnInterface = [...document.querySelectorAll(".column")];
-let interfaceScrollable = [...document.querySelectorAll(".scroll-view")];
-let messagesInterface = document.querySelector(".messages");
-let contactsList = document.querySelector(".contacts-list");
+// fichier javascript principale
 
-screen.style.height = `${window.innerHeight}px`;
-screen.style.width = `${window.innerWidth}px`;
+let contactInterface = document.querySelector(".contacts");
+let conversationInterface = document.querySelector(".conversation");
+let contactMenu = document.querySelector(".js-icone-contact-menu");
+let backConversation = document.querySelector(".js-icone-conversation-back");
+let contacts = [...document.querySelectorAll(".contact")];
 
-columnInterface.forEach(column => {
-  column.style.height = `${window.innerHeight}px`;
-});
-
-messagesInterface.style.height = `${window.innerHeight -150}px`;
-contactsList.style.height = `${window.innerHeight - 80}px`;
-
-window.onresize = function() {
-  screen.style.height = `${window.innerHeight}px`;
-  screen.style.width = `${window.innerWidth}px`;
-
-  columnInterface.forEach(column => {
-    column.style.height = `${window.innerHeight}px`;
+contacts.forEach(contact => {
+  contact.addEventListener("click", function () {
+    if (window.innerWidth <= 575) {
+      contactInterface.classList.add("d-none");
+      conversationInterface.classList.remove("d-none");
+    }
   });
+})
 
-  contactsList.style.height = `${window.innerHeight - 80}px`;
-  messagesInterface.style.height = `${window.innerHeight - 150}px`;
-}
+backConversation.addEventListener('click', function() {
+  contactInterface.classList.remove("d-none");
+  conversationInterface.classList.add("d-none");
+});

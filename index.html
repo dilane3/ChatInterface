@@ -16,14 +16,15 @@
       <div class="col-md-1 column menu border border-light">s1</div>
 
       <div class="col-md-4 col-sm-5 column contacts">
-        <div class="row">
-          <div class="col contacts-barre">
-            <div class="contacts-barre--info"></div>
+        <div class="row contacts-barre">
+          <div class="col">
             <div class="contacts-barre--menu">
               <div class="input-group">
                 <input type="text" name="" id="" class="form-control" placeholder="rechercher contact...">
               </div>
             </div>
+
+            <i class="bi bi-justify contacts-barre--icone icone js-icone-contact-menu"></i>
           </div>
         </div>
         <div class="row contacts-list scroll-view">
@@ -37,13 +38,63 @@
               <div class="contact--message text-muted">MESSAGE</div>
             </div>
           </div>
+
+          <div class="card-body contact">
+            <div>
+              <img src="./images/banane.jpeg" alt="" class="contact--image">
+            </div>
+            <div class="contact--info">
+              <span class="contact--date">date</span>
+              <div class="contact--name">NOM</div>
+              <div class="contact--message text-muted">MESSAGE</div>
+            </div>
+          </div>
+
+          <div class="card-body contact">
+            <div>
+              <img src="./images/banane.jpeg" alt="" class="contact--image">
+            </div>
+            <div class="contact--info">
+              <span class="contact--date">date</span>
+              <div class="contact--name">NOM</div>
+              <div class="contact--message text-muted">MESSAGE</div>
+            </div>
+          </div>
+
+          <div class="card-body contact">
+            <div>
+              <img src="./images/banane.jpeg" alt="" class="contact--image">
+            </div>
+            <div class="contact--info">
+              <span class="contact--date">date</span>
+              <div class="contact--name">NOM</div>
+              <div class="contact--message text-muted">MESSAGE</div>
+            </div>
+          </div>
+
+          <div class="menu-barre">barre de menu mobile</div>
         </div>
-        <div class="menu-barre">barre de menu mobile</div>
       </div>
 
       <div class="col-sm-7 column conversation">
         <div class="row">
-          <div class="col conversation-barre">conversation barre</div>
+          <div class="col conversation-barre">
+            <i class="bi bi-chevron-left icone conversation-barre--icone js-icone-conversation-back"></i>
+           
+            <div class="conversation-bloc">
+              <div>
+                <img src="./images/banane.jpeg" alt="banane" class="contact--image"/>
+              </div>
+              
+              <div class="conversation-bloc--info">
+                <div class="conversation-bloc--name">Nom</div>
+                <div class="conversation-bloc--statu text-muted">en ligne</div>
+              </div>
+
+
+            </div>
+            
+          </div>
         </div>
         <div class="row conversation-messages messages scroll-view">
           
@@ -55,19 +106,20 @@
             <div class="message-receive card-body">
               <div class="card-text">
                 bonjour la famille, moi c'est dilane et je suis votre frere de sang, j'aimerai bien
-                causer avec vous de temps en temps.
-                s'il vous plait il faudrait que quelqu'un me reponde
+                causer avec vous de.
               </div>
+              <span class="text-muted message--date">date</span>
+
             </div>
           </div>
 
           <div class="message">
             <div class="message-send card-body">
-              <div class="card-text">
-                bonjour la famille, moi c'est dilane et je suis votre frere de sang, j'aimerai bien
-                causer avec vous de temps en temps.
-                s'il vous plait il faudrait que quelqu'un me reponde
+              <div class="card-text message-text">
+                bonjour la famille, moi c'est dilane et je suis votre frere de sang, 
               </div>
+              <span class="text-muted message--date">date</span>
+
             </div>
 
             <div class="message-send--image">
@@ -80,11 +132,13 @@
               <div class="card-text">
                 tu as compris ?
               </div>
+              <span class="text-muted message--date">date</span>
             </div>
           
             <div class="message-send--image">
               <img src="./images/banane.jpeg" alt="" />
             </div>
+
           </div>
 
           <div class="message">
@@ -96,6 +150,7 @@
               <div class="card-text">
                 ok
               </div>
+              <span class="text-muted message--date">date</span>
             </div>
           </div>
 
@@ -110,6 +165,7 @@
     </div>
   </div>
 
+  <script src="./js/screenHadler.js"></script>
   <script src="./js/index.js"></script>
 </body>
 </html>

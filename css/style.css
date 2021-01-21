@@ -15,9 +15,11 @@ body {
 }
  
 .menu-barre {
+  position: absolute;
+  bottom: 0;
   display: flex;
   flex-direction: row;
-  height: 80px;
+  height: 70px;
   width: 100%;
   padding: 0 10px;
   background-color: white;
@@ -26,7 +28,8 @@ body {
 }
 
 .icone {
-  position: absolute;
+  font-size: 2rem;
+  cursor: pointer;
 }
 
 .scroll-view {
@@ -41,14 +44,14 @@ body {
 }
 
 .contacts-list {
+  width: auto;
   background-color:#eee;
-  justify-content: center;
+  border-bottom: 1px solid rgb(218, 216, 216);
 }
 
 .contact {
   position: relative;
   display: flex;
-  line-height: 25px;
   flex-direction: row;
   height: 80px;
   width: 95%;
@@ -56,10 +59,13 @@ body {
   background-color: white;
   border-radius: 5px;
   box-shadow: 2px 2px 5px lightgray;
+  border: 1px solid rgb(218, 216, 216);
+  cursor: pointer;
 }
 
 .contact--info {
   margin-left: 10px;
+  line-height: 25px;
 }
 
 .contact--message {
@@ -86,7 +92,7 @@ body {
   border: .5px solid lightgray;
 }
 
-.contacts-barre, .conversation-barre {
+.contacts-barre {
   display: flex;
   flex-direction: row;
   height: 80px;
@@ -96,8 +102,43 @@ body {
 }
 
 .conversation-barre {
+  display: flex;
+  flex-direction: row;
+  height: 80px;
+  justify-content: space-around;
+  align-items: center;
   background-color: white;
   border-bottom: 1px solid #eee;
+}
+
+.conversation-barre--icone {
+  display: block;
+  margin-left: -5px;
+  font-size: 1.4rem;
+}
+
+.conversation-bloc {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  height: 70px;
+  align-items: center;
+}
+
+.conversation-bloc--info {
+  width: 80%;
+  margin-left: 10px;
+}
+
+.conversation-bloc--name {
+  font-size: 14px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: bold;
+}
+
+.conversation-bloc--statu {
+  font-size: 12px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .contacts-barre {
@@ -105,9 +146,26 @@ body {
   border-bottom: 1px solid rgb(218, 216, 216);
 }
 
+.contacts-barre div.col {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.contacts-barre--menu {
+  position: relative;
+  width: 80%;
+}
+
+.contacts-barre--icone {
+  display: block;
+}
+
 .conversation {
   display: none;
   position: relative;
+  border-left: 1px solid rgb(218, 216, 216);
 }
 
 .messages {
@@ -120,12 +178,15 @@ body {
 
 .message {
   position: relative;
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  flex-direction: row;
-  align-items: flex-start;
+  display: block;
+  width: auto;
   padding: 10px 0;
+}
+
+.message--date {
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
 }
 
 .message-send--image, .message-receive--image {
@@ -143,17 +204,19 @@ body {
 }
 
 .message-receive {
+  position: relative;
   display: block;
-  width: auto;
   max-width: 50%;
   margin-left: 70px;
   background-color:#eee;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   border-top-left-radius: 15px;
+  padding-bottom: 30px;
 }
 
 .message-send {
+  position: relative;
   display: block;
   max-width: 50%;
   margin-left: auto;
@@ -163,6 +226,7 @@ body {
   border-top-right-radius: 15px;
   border-bottom-left-radius: 15px;
   border-top-left-radius: 15px;
+  padding-bottom: 30px;
 }
 
 .message-editor {
@@ -177,6 +241,10 @@ body {
   border: 0px;
 }
 
+.input-message:focus {
+  outline: 0;
+}
+
 @media screen and (min-width: 768px) {
   .menu {
     display: block;
@@ -186,10 +254,18 @@ body {
     display: none;
     height: 50px;
   }
+
+  .contacts-barre--icone {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 575.1px) {
   .conversation {
     display: block;
+  }
+
+  .conversation-barre--icone {
+    display: none;
   }
 }
